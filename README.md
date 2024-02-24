@@ -6,6 +6,8 @@ Actually I make this repository public here just to record my learning progress.
 
 ## How to use this repository
 
+All codes passed test on rustc 1.76.0 (07dca489a 2024-02-04).
+
 You can clone this repository to your local machine and run the examples using the `cargo` command. For example, to run the `hello_cargo` example, you can do:
 
 ```bash
