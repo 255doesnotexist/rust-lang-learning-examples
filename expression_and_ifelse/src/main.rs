@@ -1,3 +1,7 @@
+fn five() -> i32 {
+    5
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -9,4 +13,7 @@ fn main() {
 
     println!("var x = {}", x);
     // (5 + 5 * 6) * 10 + 1 = 351
+
+    println!("five function returns = {}", five());
+    // the last thing before the brackets will be returned xixi 
 }
