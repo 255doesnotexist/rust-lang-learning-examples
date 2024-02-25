@@ -27,6 +27,6 @@ fn takeit(str: String) -> usize{
     str.len()
 }
 fn swap(a: &mut String, b: &mut String) {
-    let t = a.clone();
+    let t = a.clone(); // mutable ref
     *a = b.clone(); *b = t;
 }
