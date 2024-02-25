@@ -22,4 +22,10 @@ fn main() {
     // the last thing before the brackets will be returned xixi 
     println!("add five function returns = {}", add_five(6));
     // tongli 
+
+    if five() == 5 {
+        println!("five is five");
+    }else{
+        println!("five is not equal to five");
+    }
 }
