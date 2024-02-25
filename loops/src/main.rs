@@ -27,4 +27,8 @@ fn main() {
     for i in arr.iter() {
         println!("arr {}", i);
     }
+
+    for i in (1..10).rev() { // 10..1 will be [] because left range should always < right range .rev() make it reversed 
+        println!("you can use for with range {}", i)
+    }
 }
