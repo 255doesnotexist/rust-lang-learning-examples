@@ -1,9 +1,9 @@
 fn main() {
     println!("Hello, world!");
 
-    let mut x: i32 = 5;
+    let x: i32 = 5;
     println!("The value of x is {}", x);
 
-    x = 6;
+    let x = x + 1; // shadowing
     println!("Varible x now = {}", x);
 }
