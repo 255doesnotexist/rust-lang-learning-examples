@@ -2,6 +2,10 @@ fn five() -> i32 {
     5
 }
 
+fn add_five(x: i32) -> i32 {
+    x + 5
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -16,4 +20,6 @@ fn main() {
 
     println!("five function returns = {}", five());
     // the last thing before the brackets will be returned xixi 
+    println!("add five function returns = {}", add_five(6));
+    // tongli 
 }
