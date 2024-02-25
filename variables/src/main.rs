@@ -6,4 +6,7 @@ fn main() {
 
     let x = x + 1; // shadowing
     println!("Varible x now = {}", x);
+
+    let x = x.to_string(); // shadowed x could be another type 
+    println!("x:String = {}", x);
 }
