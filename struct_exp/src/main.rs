@@ -4,6 +4,14 @@ struct User {
     age: i32,
 }
 
+impl User {
+    // self could be ref or mut ref or borrow or mut borrow 
+    // depends on your needs 
+    fn greeting(&self) {
+        println!("nice to meet you {}.", self.name);
+    }
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -15,4 +23,5 @@ fn main() {
     println!("u1 name: {} age: {}", u1.name, u1.age);
     // apply Debug traits (as we derived Debug before) 
     println!("{:?}\n{:#?}", u1, u1);
+    u1.greeting();
 }
