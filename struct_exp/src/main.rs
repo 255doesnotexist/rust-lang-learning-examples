@@ -10,6 +10,10 @@ impl User {
     fn greeting(&self) {
         println!("nice to meet you {}.", self.name);
     }
+
+    fn older(&self, user2: &User) -> bool {
+        self.age > user2.age
+    }
 }
 
 fn main() {
@@ -24,4 +28,11 @@ fn main() {
     // apply Debug traits (as we derived Debug before) 
     println!("{:?}\n{:#?}", u1, u1);
     u1.greeting();
+
+    let u2 = User {
+        name: String::from("user2"),
+        age: 18
+    };
+
+    println!("{} is {} than {}", u1.name, if u1.older(&u2) {"older"} else {"younger"}, u2.name);
 }
