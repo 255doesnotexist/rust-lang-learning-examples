@@ -8,4 +8,16 @@ fn main() {
         Some(num) => {println!("v.get(2) = Some({})", num);}
         None => {println!("out of index");}
     }
+
+    let mut vm = vec!["chii".to_string(),"kawaii".to_string()];
+    vm.push("cinamoroll".to_string());
+
+    let mut index = 0;
+    for s in &mut vm {
+        println!("vm[{}] = {}", index, s);
+        *s = s.to_owned() + " " + &index.to_string();
+        index = index + 1;
+    }
+
+    println!("{:#?}", vm);
 }
