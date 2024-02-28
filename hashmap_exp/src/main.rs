@@ -18,4 +18,8 @@ fn main() {
         Some(num) => {println!("{} -> {}", "two", num);}
         None => {println!("{} -> None", "two");}
     }
+
+    for (key, value) in &hmap {
+        println!("{} -> {}", key, value);
+    }
 }
