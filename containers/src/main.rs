@@ -1,3 +1,9 @@
+enum SpreadSheetCell {
+    Int32(i32),
+    Text(String),
+    Double(f64),
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -20,6 +26,20 @@ fn main() {
     }
 
     println!("{:#?}", vm);
+    
+    let v = vec![
+        SpreadSheetCell::Int32(1),
+        SpreadSheetCell::Text("2".to_string()),
+        SpreadSheetCell::Double(3.),
+    ];
+
+    for vi in v {
+        match vi {
+            SpreadSheetCell::Int32(num) => println!("{}", num),
+            SpreadSheetCell::Text(text) => println!("{}", text),
+            SpreadSheetCell::Double(float) => println!("{}", float),
+        }
+    }
 }
 
 /*
