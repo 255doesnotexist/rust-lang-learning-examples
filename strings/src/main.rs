@@ -16,4 +16,6 @@ fn main() {
     let s6 = format!("{}{}{}", s1, s2, s3);
     // or why dont you try format!? 
     println!("{}", s6);
+
+    // 3 ways to see string: s.bytes()：字节流, s.chars()：Unicode 标量值, 标准库中没有：字形簇 
 }
