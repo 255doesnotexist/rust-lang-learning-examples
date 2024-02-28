@@ -22,4 +22,7 @@ fn main() {
     for (key, value) in &hmap {
         println!("{} -> {}", key, value);
     }
+
+    hmap.entry("one".to_string()).or_insert(0);
+    // checking is key exsiting before inserting 
 }
