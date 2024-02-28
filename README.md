@@ -1,6 +1,6 @@
 # rust-lang-learning-examples
 
-This is a collection of toy code examples written while reading [The Rust Programming Language](https://markdown.land/readme-md), a book that teaches the basics and advanced features of Rust. High recommendation for this book.
+This is a collection of toy code examples written while reading [The Rust Programming Language](https://doc.rust-lang.org/book/), a book that teaches the basics and advanced features of Rust. High recommendation for this book.
 
 Actually I make this repository public here just to record my learning progress.
 
