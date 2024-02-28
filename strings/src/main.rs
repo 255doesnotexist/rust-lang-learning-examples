@@ -5,7 +5,15 @@ fn main() {
     let s2 = "s2".to_string();
     let s3 = "s3".to_string();
 
-    let s4 = s1 + &s2 + &s3;
-    // s4 take s1's ownership and just borrow s2 and s3 
-    println!("{}", s4);
+    // let s4 = s1 + &s2 + &s3;
+    // // s4 take s1's ownership and just borrow s2 and s3 
+    // println!("{}", s4);
+
+    let s5 = s1.clone() + &s2 + &s3;
+    println!("{}", s5);
+    // if you make a clone of s1 it will just copy and take nothing 
+
+    let s6 = format!("{}{}{}", s1, s2, s3);
+    // or why dont you try format!? 
+    println!("{}", s6);
 }
