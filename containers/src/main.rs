@@ -21,3 +21,11 @@ fn main() {
 
     println!("{:#?}", vm);
 }
+
+/*
+    let mut v = vec![1, 2, 3];
+    let v0 = &v[0];
+    v.push(4);
+    println!("{}", v0);
+    // this code wont compile because an immutable ref exists
+*/
