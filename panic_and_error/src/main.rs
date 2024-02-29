@@ -13,13 +13,13 @@ fn main() {
     }
     */
 
-    println!("we are going to have a pretty safe integer dividing calculation.")
+    println!("we are going to have a pretty safe integer dividing calculation.");
 
-    print!("input a: ");
+    println!("input a: ");
     let mut ts = String::new();
     let a: i32 = {stdin().read_line(&mut ts).expect("failed to read_line"); ts}.trim().parse().expect("not an integer");
 
-    print!("input b: ");
+    println!("input b: ");
     let mut ts = String::new();
     let b: i32 = {stdin().read_line(&mut ts).expect("failed to read_line"); ts}.trim().parse().expect("not an integer");
 
