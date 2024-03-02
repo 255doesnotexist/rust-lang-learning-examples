@@ -1,4 +1,4 @@
-use std::io::stdin;
+use std::{io::stdin};
 
 fn main() {
     println!("Hello, world!");
@@ -18,6 +18,7 @@ fn main() {
     println!("input a: ");
     let mut ts = String::new();
     let a: i32 = {stdin().read_line(&mut ts).expect("failed to read_line"); ts}.trim().parse().expect("not an integer");
+    // use ? operator here could pass err to super function (only if this function returns Result or Option or implemented FromResidual) 
 
     println!("input b: ");
     let mut ts = String::new();
@@ -27,7 +28,6 @@ fn main() {
         Ok(ans) => {println!("{} / {} = {}", a, b, ans);}
         Err(err) => {println!("{} / {} failed because {}", a, b, err);},
     }
-    
 }
 
 fn div(a: &i32, b: &i32) -> Result<i32, String> {
