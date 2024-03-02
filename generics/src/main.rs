@@ -19,7 +19,7 @@ impl HasMin for i32 {
 
 // fn largest<T: HasMin + std::cmp::Ord + Copy>(list: &[T]) -> T {
 fn largest<T>(list: &[T]) -> T 
-    where T: HasMin + std::cmp::Ord + Copy {
+    where T: HasMin + std::cmp::Ord + Copy { // need those trait to make function work 
     let mut ret: T = T::MIN;
     for &i in list { // &i will auto deref so *i* will be i32. if you put "for i in list" here *i* will be i32 
         ret = max(ret, i);
