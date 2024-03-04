@@ -17,6 +17,11 @@ fn main() {
         c = longest(&a, &b);
     } // that's right 
     println!("{}", c);
+
+    let ts = TwoStrings {
+        str1: &String::from("first"),
+        str2: &String::from("second"),
+    };
 }
 
 fn longest<'a>(a: &'a String, b: &'a String) -> &'a String {
@@ -25,4 +30,9 @@ fn longest<'a>(a: &'a String, b: &'a String) -> &'a String {
     } else {
         b
     }
+}
+
+struct TwoStrings <'a> {
+    str1: &'a String,
+    str2: &'a String,
 }
