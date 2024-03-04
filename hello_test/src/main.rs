@@ -2,10 +2,10 @@ fn main() {
     println!("Hello, world!");
 }
 
-#[test]
-#[should_panic] // in this case panic mean test passed
+#[test] // by using expected to make shoudl_panic more accurate 
+// #[should_panic(expected = "expected panic string")] // in this case panic mean test passed
 fn test() {
-    panic!("now panic");
+    // panic!("now panic");
     println!("test function acted");
 
     assert_eq!(1+1, 2); // passed test 
