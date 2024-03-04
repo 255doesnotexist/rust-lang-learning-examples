@@ -3,7 +3,9 @@ fn main() {
 }
 
 #[test]
+#[should_panic] // in this case panic mean test passed
 fn test() {
+    panic!("now panic");
     println!("test function acted");
 
     assert_eq!(1+1, 2); // passed test 
