@@ -2,7 +2,7 @@ fn main() {
     println!("Hello, world!");
 }
 
-#[test] // by using expected to make shoudl_panic more accurate 
+#[test] // by using expected to make should_panic more accurate 
 // #[should_panic(expected = "expected panic string")] // in this case panic mean test passed
 fn test() {
     // panic!("now panic");
