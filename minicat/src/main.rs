@@ -13,8 +13,9 @@ fn main() -> io::Result<()> {
         process::exit(1);
     });
 
-    for (i, content) in config.contents.iter().enumerate() {
-        print!("{}", content);
+    if let Err(err) = run(&config) {
+        eprintln!("Application problems: {}", err);
+        process::exit(1);
     }
 
     Ok(())
@@ -36,3 +37,9 @@ impl Config {
     }
 }
 
+fn run(config: &Config) -> Result<(), Box<dyn Error> > {
+    for (i, content) in config.contents.iter().enumerate() {
+        print!("{}", content);
+    }
+    Ok(())
+}
