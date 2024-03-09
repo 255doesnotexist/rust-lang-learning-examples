@@ -7,7 +7,7 @@ fn main() -> io::Result<()> {
 
     let config = minicat::Config::new(&args).unwrap_or_else(|err| {
         eprintln!("Problems happened because: {}", err);
-        process::exit(1);
+        process::exit(1); // lambda in rust 
     });
 
     if let Err(err) = minicat::run(&config) {
