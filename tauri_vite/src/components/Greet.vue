@@ -14,7 +14,7 @@ async function greet() {
 <template>
   <form class="row" @submit.prevent="greet">
     <input id="greet-input" v-model="name" placeholder="Enter a name..." />
-    <button type="submit">Greet</button>
+    <v-btn prepend-icon="$vuetify" type="submit">Greet</v-btn>
   </form>
 
   <p>{{ greetMsg }}</p>
