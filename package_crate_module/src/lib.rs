@@ -5,3 +5,5 @@ pub mod fancyprinting {
         }
     }
 }
+
+pub use self::fancyprinting::ezra::write as EzraWrite;
