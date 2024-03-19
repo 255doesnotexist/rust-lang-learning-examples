@@ -2,13 +2,15 @@
 Detect decimal digit in char or first char of the str and String.
 
 ## Install
-Specify the dependencty in Cargo.toml:
+Specify the dependency in Cargo.toml:
 
 ```yaml
 [dependencies]
 is-digit = "~0.1.1"
+```
 
-Fetch it with cargo:
+Build is-digit with cargo:
+
 ```bash
 $ cargo build
 ```
