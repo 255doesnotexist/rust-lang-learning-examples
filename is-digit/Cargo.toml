@@ -1,10 +1,10 @@
 [package]
 name = "is-digit"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 author = "255doesnotexist"
 license = "MIT"
-description = "Detect digits in char or first char of the str and String."
+description = "Detect decimal digit in char or first char of the str and String."
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

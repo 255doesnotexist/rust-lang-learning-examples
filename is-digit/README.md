@@ -1,13 +1,12 @@
 # is-digit
-Returns true if the given char/str/String is a decimal digit.
+Detect decimal digit in char or first char of the str and String.
 
 ## Install
 Specify the dependencty in Cargo.toml:
 
 ```yaml
 [dependencies]
-is-digit = "~0.1.0"
-```
+is-digit = "~0.1.1"
 
 Fetch it with cargo:
 ```bash
