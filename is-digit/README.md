@@ -20,11 +20,11 @@ extern crate is_digit;
 use is_digit::IsDigit;
 
 let _i = '1';
-println!("{}", _i.is_digit()); // prints true
+println!("{}", _i.is_dec_digit()); // prints true
 let _j = "2";
-println!("{}", _j.is_digit()); // prints true
+println!("{}", _j.is_dec_digit()); // prints true
 let _k = String::from("3");
-println!("{}", _k.is_digit()); // prints true
+println!("{}", _k.is_dec_digit()); // prints true
 ```
 
 ## About
