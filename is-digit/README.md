@@ -18,7 +18,7 @@ $ cargo build
 
 ```rust
 extern crate is_digit;
-use is-digit::IsDigit;
+use is_digit::IsDigit;
 
 let _i = '1';
 println!("{}", _i.is_digit()); // prints true
