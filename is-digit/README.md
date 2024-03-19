@@ -1,5 +1,5 @@
 # is-digit
-Returns true if the given number is decimal digit.
+Returns true if the given char/str/String is a decimal digit.
 
 ## Install
 Specify the dependencty in Cargo.toml:
