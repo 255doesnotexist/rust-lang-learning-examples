@@ -100,3 +100,8 @@ fn main() {
 
 // std::mem:drop is a function that you can call manually
 // to drop the data manually.
+
+// Rc<T>: yet another shared_ptr<T> 
+// count ref whenever clone is called
+// strong count by deafult 
+// also we had weak count as Weak<T> 
