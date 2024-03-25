@@ -25,6 +25,9 @@ fn main() {
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
+
+    let s = Box::new(String::from("rust"));
+    hello(&s);
 }
 
 // 评论：这不是unique_ptr吗？？？ 
@@ -51,3 +54,7 @@ impl<T> Deref for MyBox<T> {
 }
 
 // impl Deref traits for MyBox pointer 
+
+fn hello(name: &str) {
+    println!("Hello, {name}!");
+}
