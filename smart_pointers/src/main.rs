@@ -46,7 +46,8 @@ impl<T> Deref for MyBox<T> {
 
     fn deref(&self) -> &Self::Target {
         &self.0
-    }
+    } // give compiler how to deref it could deref 
+    // when *y, rust actually run *(y.deref()) 
 }
 
 // impl Deref traits for MyBox pointer 
