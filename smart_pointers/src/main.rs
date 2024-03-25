@@ -21,7 +21,7 @@ fn main() {
 
 
     let x = 5;
-    let y = Box::new(x); // also passed so Box could work like native ref 
+    let y = MyBox::new(x); // also passed so Box could work like native ref 
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
