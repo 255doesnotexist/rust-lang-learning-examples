@@ -27,7 +27,8 @@ fn main() {
     assert_eq!(5, *y);
 
     let s = Box::new(String::from("rust"));
-    hello(&s);
+    hello(&s); // or hello(&(*m)[..]); 
+    // explain the auto convert done by compiler with deref traits 
 }
 
 // 评论：这不是unique_ptr吗？？？ 
