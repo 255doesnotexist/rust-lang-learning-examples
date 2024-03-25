@@ -56,6 +56,12 @@ impl<T> Deref for MyBox<T> {
 
 // impl Deref traits for MyBox pointer 
 
+// also rust have derefmut trait 
+// rust will coerce a mutable ref o immutable one 
+// from &T -> &U (when T by Deref<Target=U>) 
+// from &mut T -> &mut U (when T by DerefMut<Target=U>) 
+// from &mut T -> &U (when T: Deref<Target=U>)
+
 fn hello(name: &str) {
     println!("Hello, {name}!");
 }
