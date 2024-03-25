@@ -1,3 +1,4 @@
+/*
 // fn main() {
 //     let b = Box::new(5); // save 5 on heap 
 //     println!("b = {}", b);
@@ -64,4 +65,26 @@ impl<T> Deref for MyBox<T> {
 
 fn hello(name: &str) {
     println!("Hello, {name}!");
+}
+*/
+
+struct CustomSmartPointer {
+    data: String,
+}
+
+// rust impl drop traits for free allocated data 
+impl Drop for CustomSmartPointer {
+    fn drop(&mut self) {
+        println!("Dropping CustomSmartPointer with data `{}`!", self.data);
+    }
+}
+
+fn main() {
+    let c = CustomSmartPointer {
+        data: String::from("my stuff"),
+    };
+    let d = CustomSmartPointer {
+        data: String::from("other stuff"),
+    };
+    println!("CustomSmartPointers created.");
 }
