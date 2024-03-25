@@ -88,3 +88,7 @@ fn main() {
     };
     println!("CustomSmartPointers created.");
 }
+// results: 
+// CustomSmartPointers created.
+// Dropping CustomSmartPointer with data `other stuff`!
+// Dropping CustomSmartPointer with data `my stuff`!
