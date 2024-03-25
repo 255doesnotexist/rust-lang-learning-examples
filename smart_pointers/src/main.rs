@@ -92,3 +92,11 @@ fn main() {
 // CustomSmartPointers created.
 // Dropping CustomSmartPointer with data `other stuff`!
 // Dropping CustomSmartPointer with data `my stuff`!
+
+
+// you cannot call drop manually because rust will always
+// try drop all the data when it goes out of scope which caused
+// double free error.
+
+// std::mem:drop is a function that you can call manually
+// to drop the data manually.
