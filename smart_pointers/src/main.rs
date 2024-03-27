@@ -68,6 +68,8 @@ fn hello(name: &str) {
 }
 */
 
+/*
+
 struct CustomSmartPointer {
     data: String,
 }
@@ -105,3 +107,32 @@ fn main() {
 // count ref whenever clone is called
 // strong count by deafult 
 // also we had weak count as Weak<T> 
+
+*/
+
+#[derive(Debug)]
+enum List {
+    Cons(Rc<RefCell<i32>>, Rc<List>),
+    Nil,
+}
+
+use crate::List::{Cons, Nil};
+use std::cell::RefCell;
+use std::rc::Rc;
+
+fn main() {
+    // also examples from **the book** 
+    // it shows we can change elements in inmutable lists with RefCell<T> 
+    let value = Rc::new(RefCell::new(5));
+
+    let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+
+    let b = Cons(Rc::new(RefCell::new(3)), Rc::clone(&a));
+    let c = Cons(Rc::new(RefCell::new(4)), Rc::clone(&a));
+
+    *value.borrow_mut() += 10;
+
+    println!("a after = {:?}", a);
+    println!("b after = {:?}", b);
+    println!("c after = {:?}", c);
+}
