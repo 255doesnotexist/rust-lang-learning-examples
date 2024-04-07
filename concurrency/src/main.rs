@@ -55,3 +55,5 @@ fn main() {
     handle.join().unwrap();
     // this will wait for the spawned thread to finish 
 }
+
+// chatgpt tell me println macro is not atomic so upper related comment is not true 
